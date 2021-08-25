@@ -48,7 +48,7 @@ public class AddressBook {
 		System.out.println();
 		ContactPerson contact1 = new ContactPerson();
 		ContactPerson contact2 = new ContactPerson();
-		ContactPerson editContact1 = new ContactPerson();
+		
 
 		System.out.println("Adding Contact Details of Contact1 Person");
 		contact1.addContact();
@@ -61,12 +61,7 @@ public class AddressBook {
 		System.out.println("Printing Contact Details of Contact2 Person");
 		contact2.printContact();
 
-		System.out.println();
-		System.out.println("Editing Contact Details of Contact1 Person");
-		editContact1.addContact();
-		System.out.println("Displaying edited Contact Details of Contact1 Person");
-		editContact1.printContact();
-
+		
 	}
 
 }
