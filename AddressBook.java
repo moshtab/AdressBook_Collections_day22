@@ -1,57 +1,50 @@
 package collections.adressBook;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
-class ContactPerson {
-
-	private String firstName, lastName, city, state;
-	private long phoneNumber, zip;
-
-	public void addContact() {
-		Scanner s = new Scanner(System.in);
-		System.out.println("Enter the First name");
-		firstName = s.nextLine();
-
-		System.out.println("Enter the Last name");
-		lastName = s.nextLine();
-
-		System.out.println("Enter the City name");
-		city = s.nextLine();
-
-		System.out.println("Enter the State name");
-		state = s.nextLine();
-
-		System.out.println("Enter the Phone number");
-		phoneNumber = s.nextLong();
-
-		System.out.println("Enter the Zip");
-		zip = s.nextLong();
-
-		s.close();
-
-	}
-
-	public void printContact() {
-		System.out.println("First Name is : " + firstName);
-		System.out.println("Last Name is : " + lastName);
-		System.out.println("City Name is : " + city);
-		System.out.println("State Name is : " + state);
-		System.out.println("Phone Number is : " + phoneNumber);
-		System.out.println("Zip is : " + zip);
-
-	}
-}
-
-public class AddressBook {
+class AddressBook {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program");
-		ContactPerson myobj = new ContactPerson();
-		System.out.println("Adding contact details of Contact Person1");
-		myobj.addContact();
-		System.out.println("Displaying the contact details of Contact Person1");
-		myobj.printContact();
+		Contact c1 = new Contact();
+		Contact c2 = new Contact();
 
+		List<Contact> adressBook = new ArrayList<>();
+		adressBook.add(c1);
+		adressBook.add(c2);
+		// for accesing the adressBook list
+		for (Contact i : adressBook) {
+			System.out.println(i.addContact());
+		}
+		// for searching element
+		for (Contact i : adressBook) {
+			if (i.firstName.contains("Mohsin")) {
+				System.out.println("Name found");
+			} else {
+				System.out.println("No match");
+			}
+
+		}
+		// checking whether contact1 details are equal to contact2
+		System.out.println(c1.equals(c2));
+
+		AddingAddressBook addressBook1 = new AddingAddressBook();
+		AddingAddressBook addressBook2 = new AddingAddressBook();
+
+		List<AddingAddressBook> adressBooks = new ArrayList<>();
+		adressBooks.add(addressBook1);
+		adressBooks.add(addressBook2);
+		for (AddingAddressBook i : adressBooks) {
+			if (i.addAddressBook().contains("Mohsin")) {
+				System.out.println("Name found");
+			} else {
+				System.out.println("No match");
+			}
+
+		}
+
+		
 	}
 
 }
