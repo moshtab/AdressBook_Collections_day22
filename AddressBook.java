@@ -56,7 +56,7 @@ public class AddressBook {
 		contact1.printContact();
 
 		System.out.println();
-		System.out.println("Adding Contact Details of Contact2 Person");
+		System.out.println("Adding. Contact Details of Contact2 Person");
 		contact2.addContact();
 		System.out.println("Printing Contact Details of Contact2 Person");
 		contact2.printContact();
